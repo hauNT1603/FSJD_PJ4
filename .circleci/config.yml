@@ -14,22 +14,22 @@ jobs:
       - eb/setup
       - run:
           name: "Install front end dependencies"
-          command: "npm run fe:install"
+          command: "npm run frontend:install"
       - run:
           name: "Build front end"
-          command: "npm run fe:build"
+          command: "npm run frontend:build"
       - run:
           name: "Deploy front end"
-          command: "npm run fe:deploy"
+          command: "npm run frontend:deploy"
       - run:
           name: "Install back end dependencies"
-          command: "npm run be:install"
+          command: "npm run api:install"
       - run:
           name: "Build back end"
-          command: "npm run be:build"
+          command: "npm run api:build"
       - run:
           name: "Deploy back end"
-          command: "npm run be:deploy"
+          command: "npm run api:deploy"
 workflows:
   build:
     jobs:
